@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Counter Component Debe de hacer mach con el snapshot 1`] = `
+<!--v-if-->
+<div class="bg-dark">
+  <div class="container">
+    <div class="indecision-container">
+      <div class="input-group mb-3"><span class="input-group-text" id="basic-addon3">Hazme una pregunta</span><input type="text" class="form-control" placeholder="Preguntame..."></div>
+      <p>Recuerda terminar con un signo de interrogación (?)</p>
+      <!--v-if-->
+    </div>
+  </div>
+</div>
+`;

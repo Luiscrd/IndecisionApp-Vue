@@ -29,11 +29,17 @@ export default {
         }
     },
     methods: {
-        async geetAnswer() {
-            this.answer = 'Pensando...'
-            const { answer, image } = await fetch('https://yesno.wtf/api').then(resp => resp.json())
-            this.answer = answer === 'yes' ? 'Sii!' : 'Noo!'
-            this.img = image
+        async getAnswer() {
+            try {
+                this.answer = 'Pensando...'
+                const { answer, image } = await fetch('https://yesno.wtf/api').then(resp => resp.json())
+                this.answer = answer === 'yes' ? 'Sii!' : 'Noo!'
+                this.img = image
+            } catch (error) {
+                console.log('IndecisionComponent: ', error)
+                this.answer = 'No se pudo cargar del API'
+                this.img = null
+            }
         }
     },
     watch: {
@@ -42,7 +48,7 @@ export default {
             this.img = null
             if (!value.includes('?')) return
             this.isValidQuestion = true
-            this.geetAnswer()
+            this.getAnswer()
         }
     }
 }
@@ -50,7 +56,7 @@ export default {
 
 <style scoped>
 img {
-    height: calc( 100% - 160px );
+    height: calc(100% - 160px);
     left: 0px;
     max-height: 100%;
     max-width: 100%;
