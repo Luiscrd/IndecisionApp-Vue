@@ -1,7 +1,7 @@
 import { shallowMount } from '@vue/test-utils'
 import Indecision from '@/components/Indecision.vue'
 
-describe('Counter Component', () => {
+describe('Indecision Component', () => {
 
     let wrapper;
 
