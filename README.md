@@ -3,6 +3,7 @@
 </p>
 
 # IndecisionApp
+Ver: [Ir a la web](https://poetic-vacherin-24000f.netlify.app/).
 
 ## Project setup
 ```
